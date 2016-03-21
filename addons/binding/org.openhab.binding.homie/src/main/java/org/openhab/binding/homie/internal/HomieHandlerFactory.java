@@ -7,24 +7,24 @@
  */
 package org.openhab.binding.homie.internal;
 
-import static org.openhab.binding.homie.homieBindingConstants.*;
+import static org.openhab.binding.homie.HomieBindingConstants.*;
 
 import java.util.Collections;
 import java.util.Set;
 
-import org.openhab.binding.homie.handler.homieHandler;
+import org.openhab.binding.homie.handler.HomieHandler;
 import org.eclipse.smarthome.core.thing.Thing;
 import org.eclipse.smarthome.core.thing.ThingTypeUID;
 import org.eclipse.smarthome.core.thing.binding.BaseThingHandlerFactory;
 import org.eclipse.smarthome.core.thing.binding.ThingHandler;
 
 /**
- * The {@link homieHandlerFactory} is responsible for creating things and thing 
+ * The {@link HomieHandlerFactory} is responsible for creating things and thing 
  * handlers.
  * 
  * @author Roman - Initial contribution
  */
-public class homieHandlerFactory extends BaseThingHandlerFactory {
+public class HomieHandlerFactory extends BaseThingHandlerFactory {
     
     private final static Set<ThingTypeUID> SUPPORTED_THING_TYPES_UIDS = Collections.singleton(THING_TYPE_SAMPLE);
     
@@ -39,7 +39,7 @@ public class homieHandlerFactory extends BaseThingHandlerFactory {
         ThingTypeUID thingTypeUID = thing.getThingTypeUID();
 
         if (thingTypeUID.equals(THING_TYPE_SAMPLE)) {
-            return new homieHandler(thing);
+            return new HomieHandler(thing);
         }
 
         return null;

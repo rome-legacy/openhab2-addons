@@ -7,7 +7,7 @@
  */
 package org.openhab.binding.homie.handler;
 
-import static org.openhab.binding.homie.homieBindingConstants.*;
+import static org.openhab.binding.homie.HomieBindingConstants.*;
 
 import org.eclipse.smarthome.core.thing.ChannelUID;
 import org.eclipse.smarthome.core.thing.Thing;
@@ -18,16 +18,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * The {@link homieHandler} is responsible for handling commands, which are
+ * The {@link HomieHandler} is responsible for handling commands, which are
  * sent to one of the channels.
  * 
  * @author Roman - Initial contribution
  */
-public class homieHandler extends BaseThingHandler {
+public class HomieHandler extends BaseThingHandler {
 
-    private Logger logger = LoggerFactory.getLogger(homieHandler.class);
+    private Logger logger = LoggerFactory.getLogger(HomieHandler.class);
 
-	public homieHandler(Thing thing) {
+	public HomieHandler(Thing thing) {
 		super(thing);
 	}
 

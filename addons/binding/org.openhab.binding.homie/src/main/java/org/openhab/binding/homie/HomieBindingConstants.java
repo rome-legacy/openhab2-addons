@@ -10,12 +10,12 @@ package org.openhab.binding.homie;
 import org.eclipse.smarthome.core.thing.ThingTypeUID;
 
 /**
- * The {@link homieBinding} class defines common constants, which are 
+ * The {@link HomieBinding} class defines common constants, which are 
  * used across the whole binding.
  * 
  * @author Roman - Initial contribution
  */
-public class homieBindingConstants {
+public class HomieBindingConstants {
 
     public static final String BINDING_ID = "homie";
     

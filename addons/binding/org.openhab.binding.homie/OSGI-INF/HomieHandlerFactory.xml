@@ -10,7 +10,7 @@
 -->
 <scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="binding.homie">
 
-   <implementation class="org.openhab.binding.homie.internal.homieHandlerFactory"/>
+   <implementation class="org.openhab.binding.homie.internal.HomieHandlerFactory"/>
 
    <service>
       <provide interface="org.eclipse.smarthome.core.thing.binding.ThingHandlerFactory"/>

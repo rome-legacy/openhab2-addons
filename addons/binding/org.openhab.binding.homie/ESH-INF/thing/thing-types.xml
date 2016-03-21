@@ -6,8 +6,8 @@
 
     <!-- Sample Thing Type -->
     <thing-type id="sample">
-        <label>homie Binding Thing</label>
-        <description>Sample thing for homie Binding</description>
+        <label>Homie Binding Thing</label>
+        <description>Sample thing for Homie Binding</description>
 
         <channels>
             <channel id="channel1" typeId="sample-channel"/>
@@ -17,8 +17,8 @@
     <!-- Sample Channel Type -->
     <channel-type id="sample-channel">
         <item-type>homieItem</item-type>
-        <label>homie Binding Channel</label>
-        <description>Sample channel for homie Binding</description>
+        <label>Homie Binding Channel</label>
+        <description>Sample channel for Homie Binding</description>
     </channel-type>
 
 </thing:thing-descriptions>
