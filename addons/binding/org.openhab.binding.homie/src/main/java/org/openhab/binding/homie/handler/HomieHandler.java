@@ -7,7 +7,7 @@
  */
 package org.openhab.binding.homie.handler;
 
-import static org.openhab.binding.homie.HomieBindingConstants.*;
+import static org.openhab.binding.homie.HomieBindingConstants.CHANNEL_PING;
 
 import org.eclipse.smarthome.core.thing.ChannelUID;
 import org.eclipse.smarthome.core.thing.Thing;
@@ -20,20 +20,22 @@ import org.slf4j.LoggerFactory;
 /**
  * The {@link HomieHandler} is responsible for handling commands, which are
  * sent to one of the channels.
- * 
+ *
  * @author Roman - Initial contribution
  */
 public class HomieHandler extends BaseThingHandler {
 
     private Logger logger = LoggerFactory.getLogger(HomieHandler.class);
 
-	public HomieHandler(Thing thing) {
-		super(thing);
-	}
+    public HomieHandler(Thing thing) {
+        super(thing);
+    }
 
-	@Override
-	public void handleCommand(ChannelUID channelUID, Command command) {
-        if(channelUID.getId().equals(CHANNEL_1)) {
+    @Override
+    public void handleCommand(ChannelUID channelUID, Command command) {
+        logger.debug("HomieHandler::handleCommand()");
+
+        if (channelUID.getId().equals(CHANNEL_PING)) {
             // TODO: handle command
 
             // Note: if communication with thing fails for some reason,
@@ -41,10 +43,11 @@ public class HomieHandler extends BaseThingHandler {
             // updateStatus(ThingStatus.OFFLINE, ThingStatusDetail.COMMUNICATION_ERROR,
             // "Could not control device at IP address x.x.x.x");
         }
-	}
+    }
 
     @Override
     public void initialize() {
+        logger.debug("HomieHandler::initialize()");
         // TODO: Initialize the thing. If done set status to ONLINE to indicate proper working.
         // Long running initialization should be done asynchronously in background.
         updateStatus(ThingStatus.ONLINE);
